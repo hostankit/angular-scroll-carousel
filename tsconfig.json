@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angular-scroll-carousel": [
+        "dist/angular-scroll-carousel/angular-scroll-carousel",
+        "dist/angular-scroll-carousel"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

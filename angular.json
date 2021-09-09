@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-scroll-carousel": {
+      "projectType": "library",
+      "root": "projects/angular-scroll-carousel",
+      "sourceRoot": "projects/angular-scroll-carousel/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-scroll-carousel/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-scroll-carousel/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-scroll-carousel/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-scroll-carousel/src/test.ts",
+            "tsConfig": "projects/angular-scroll-carousel/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-scroll-carousel/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-scroll-carousel"
 }
